@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <link href="https://fonts.googleapis.com">
+    <title>Click Race Game</title>
+    <script src="click.js"></script>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            position: relative;
+            background-color: rgb(1, 1, 24);
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Lato", sans-serif;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            font-size: 20px;
+            padding-right: 40px;
+        }
+
+        h1 {right: 350px;
+            bottom: 500px;
+            display: flex;
+            position: fixed;
+            color: rgb(245, 247, 157);
+        }
+
+        .container {position:relative;
+        left:20px;
+            box-sizing: border-box;
+            width: 65vh;
+            height: 60vh;
+            box-shadow: rgb(210, 210, 221);
+            background-color: rgb(214, 209, 184);
+            border-radius: 20px;
+
+        }
+        #start {
+            position: absolute;
+            border: black solid;
+            width: 100px;
+            top: 250px;
+            margin-left: 150px;
+            padding: 7px;
+            border-radius: 10px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        #click {
+            position: absolute;
+            border: black solid;
+            width: 100px;
+            top: 250px;
+            margin-left: 150px;
+            padding: 7px;
+            border-radius: 10px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        #restart {
+            position: absolute;
+            border: black solid;
+            width: 100px;
+            top: 300px;
+            margin-left: 150px;
+            padding: 7px;
+            border-radius: 10px;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        #timer {
+            color: black;
+            text-align: center;
+            align-content: center;
+            position: absolute;
+            margin-left: 180px;
+            margin-top: 30px;
+            border-radius: 10px;
+            background-color: white;
+            width: 25px;
+            height: 4vh;
+            padding: 2px;
+
+        }
+
+        .modal {
+            color: white;
+            background-color: #388;
+            position: fixed;
+            box-sizing: border-box;
+            border-radius: 11px;
+            border: black solid;
+            height: 40vh;
+            width: 30vh;
+            display: flex;
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+
+        .column {
+            color: black;
+            position: fixed;
+            box-sizing: border-box;
+            border-radius: 11px;
+            border: black solid;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color:rgba(0,0,0,0.7);
+    
+            top: 0;
+            left: 0;
+        }
+
+
+
+
+
+
+        .content {position: relative;
+            background-color:white;
+            margin: 15% auto;
+            font-size: 50px;
+            color: black solid;
+            width: 80%;
+            height: 50vh;
+            padding: 20px;
+            border: 1px solid #888;
+            color: rgb(10, 0, 0);
+            border: solid black;
+            justify-content: center;
+        }
+
+        .close {position:absolute;
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            border: none;
+            top:10px;
+            right: 10px;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .hide {
+            display: none;
+        }
+        
+
+
+
+        #display {
+            color: black;
+            width: 50%;
+            font-size: 25px;
+            padding: 15px;
+            text-align: center;
+            align-content: center;
+            position: absolute;
+            margin-left: 85px;
+            margin-top: 100px;
+            border-radius: 10px;
+            background-color: rgb(127, 250, 158);
+        }
+    </style>
+</head>
+
+<body >
+    <h1>Click Race Game</h1>
+    <div class="container">
+        <div id="timer"></div>
+        <button id="click">Click</button>
+        <button id="start">Start</button>
+        <button id="restart">Restart</button>
+        <input type="text" id="display" placeholder="click counter" required="readonly" disabled />
+    </div>
+    <div class="column hide" id="modal">
+        <div class="content" id="content">
+           <p id="red"></p>
+            <button class="close" id="close">x</button></div>
+    </div>
+</body>
+
+</html>
